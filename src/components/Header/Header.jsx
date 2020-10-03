@@ -1,12 +1,14 @@
 import React from 'react';
-import HeaderBrand from './HeaderBrand';
+import HeaderBrand from './HeaderBrand/HeaderBrand';
+import HeaderNavigation from './HeaderNavigation/HeaderNavigation';
+import HeaderSearch from './HeaderSearch/HeaderSearch';
 
 const Header = (props) => {
     return (
         <div className="header">
             <HeaderBrand></HeaderBrand>
-            <div className="header_search"></div>
-            <div className="header_navigation"></div>
+            <HeaderSearch></HeaderSearch>
+            <HeaderNavigation></HeaderNavigation>
         </div>
     );
 };
