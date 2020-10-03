@@ -19,3 +19,7 @@ body {
     color: $body_color;
     min-height: 100vh;
 }
+
+svg, img {
+    max-height: 40px;
+}
