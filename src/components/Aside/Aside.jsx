@@ -21,10 +21,15 @@ import { ReactComponent as FlagLogo } from './../../assets/icons/flag.svg';
 import { ReactComponent as AskLogo } from './../../assets/icons/ask.svg';
 import { ReactComponent as SuggestionsLogo } from './../../assets/icons/suggestions.svg';
 import Footer from './Footer';
+import styled from 'styled-components';
+
+const AsideStyled = styled.aside`
+    grid-area: 2 / 1 / span 1 / span 1;
+`;
 
 const Aside = (props) => {
     return (
-        <div className="aside">
+        <AsideStyled className="aside">
             <div className="aside_inicio">
                 <AsideTitle title="" />
                 <AsideListComponent name="Inicio" icon={<HomeLogo />} />
@@ -79,7 +84,7 @@ const Aside = (props) => {
                 <AsideListComponent name="Enviar Sugerencias" icon={<SuggestionsLogo />} />
             </div>
             <Footer />
-        </div>
+        </AsideStyled>
     );
 };
 

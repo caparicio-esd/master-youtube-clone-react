@@ -9,6 +9,7 @@ import styled from 'styled-components';
  *
  */
 const HeaderStyled = styled.header`
+    grid-area: 1 / 1 / span 1 / -1;
     display: flex;
     justify-content: space-between;
     align-items: center;

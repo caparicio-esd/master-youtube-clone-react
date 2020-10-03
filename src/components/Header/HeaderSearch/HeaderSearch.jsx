@@ -12,7 +12,7 @@ const HeaderSearchStyled = styled.div`
     margin: 0 5rem;
 
     .search_results {
-        display: ${({ showResults }) => showResults ? 'block' : 'none'};
+        display: ${({ showResults }) => (showResults ? 'block' : 'none')};
         position: absolute;
         top: 100%;
         left: 0;
@@ -32,7 +32,7 @@ const HeaderSearch = (props) => {
     return (
         <HeaderSearchStyled className="header_search" showResults={false}>
             <HeaderSearchForm></HeaderSearchForm>
-            <div className="search_results" >
+            <div className="search_results">
                 <HeaderSearchResult label="Result label 1"></HeaderSearchResult>
                 <HeaderSearchResult label="Result label 2"></HeaderSearchResult>
                 <HeaderSearchResult label="Result label 3"></HeaderSearchResult>
