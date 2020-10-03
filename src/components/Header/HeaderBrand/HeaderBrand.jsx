@@ -12,9 +12,7 @@ const HeaderBrand = (props) => {
                 <div className="header_logo_yt" style={{ height: '30px' }}>
                     <YoutubeLogo></YoutubeLogo>
                 </div>
-                <div className="header_logo_country">
-                    ES
-                </div>
+                <div className="header_logo_country">ES</div>
             </div>
         </div>
     );

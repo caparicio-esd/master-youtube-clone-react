@@ -20,7 +20,7 @@ const HeaderNavigation = (props) => {
             </div>
             <div className="header_navigation_user">
                 <div className="header_navigation_user_picture">
-                    <img src={UserPicture} alt="user"/>
+                    <img src={UserPicture} alt="user" />
                 </div>
                 <UserWindow></UserWindow>
             </div>

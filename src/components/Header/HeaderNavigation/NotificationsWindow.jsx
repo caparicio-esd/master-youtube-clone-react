@@ -1,11 +1,7 @@
-import React from 'react'
+import React from 'react';
 
 const NotificationsWindow = () => {
-    return (
-        <div className="notifications_window">
-            Notifications window
-        </div>
-    )
-}
+    return <div className="notifications_window">Notifications window</div>;
+};
 
-export default NotificationsWindow
+export default NotificationsWindow;
