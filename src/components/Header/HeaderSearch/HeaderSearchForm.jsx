@@ -1,10 +1,41 @@
 import React from 'react';
+import styled from 'styled-components';
 
+/**
+ *
+ *
+ */
+const HeaderSearchFormStyled = styled.div`
+    form {
+        display: flex;
+    }
+    .form_group_input {
+        flex-basis: 100%;
+    }
+    .form_group_input input {
+        display: block;
+        width: 100%;
+        padding: 0.35rem 1rem;
+        border: 1px solid #ccc;
+        border-radius: 2px 0 0 2px;
+    }
+    button {
+        padding: 0.35rem 2rem;
+        border: 1px solid #ccc;
+        background-color: #ccc;
+        border-radius: 0 2px 2px 0;
+    }
+`;
+
+/**
+ *
+ *
+ */
 const HeaderSearchForm = (props) => {
     return (
-        <div className="header_searchform">
+        <HeaderSearchFormStyled className="header_searchform">
             <form>
-                <div className="form_group">
+                <div className="form_group form_group_input">
                     <input
                         type="search"
                         name="search"
@@ -18,7 +49,7 @@ const HeaderSearchForm = (props) => {
                     </button>
                 </div>
             </form>
-        </div>
+        </HeaderSearchFormStyled>
     );
 };
 

@@ -4,7 +4,7 @@ const AsideSuscriptionComponent = ({ name, picture, status }) => {
     return (
         <div className="aside_list_component">
             <div className="aside_list_component_picture">
-                <img src={picture} alt=""/>
+                <img src={picture} alt="" />
             </div>
             <div className="aside_list_component_label">{name}</div>
             <div className="aside_suscription_component_status">
