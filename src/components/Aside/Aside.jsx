@@ -10,6 +10,7 @@ import { ReactComponent as HistorialLogo } from './../../assets/icons/historial.
 import { ReactComponent as MyVideosLogo } from './../../assets/icons/my_videos.svg';
 import { ReactComponent as SeeLaterLogo } from './../../assets/icons/see_later.svg';
 import { ReactComponent as ChevDownLogo } from './../../assets/icons/chevron_down.svg';
+import { ReactComponent as PlusLogo } from './../../assets/icons/plus.svg';
 import { ReactComponent as YouTubeLogo } from './../../assets/icons/youtube.svg';
 import { ReactComponent as FilmLogo } from './../../assets/icons/films.svg';
 import { ReactComponent as VideoGamesLogo } from './../../assets/icons/videogames.svg';
@@ -40,7 +41,27 @@ const Aside = (props) => {
             </div>
             <div className="aside_suscripciones">
                 <AsideTitle title="Suscripciones" />
-                <AsideSuscriptionComponent name="Biblioteca" picture={<LibraryLogo />} status="active" />
+                <AsideSuscriptionComponent
+                    name="Biblioteca"
+                    picture="https://yt3.ggpht.com/a/AATXAJzwH7c2jihugQTb5s_saVuxeA6qiRVzIb5iORqn=s88-c-k-c0xffffffff-no-rj-mo"
+                />
+                <AsideSuscriptionComponent
+                    name="Biblioteca"
+                    picture="https://yt3.ggpht.com/a/AATXAJw16CwPy9wYC-KbKg7_d-V5owsvp4zmmcghiVpu=s88-c-k-c0xffffffff-no-rj-mo"
+                />
+                <AsideSuscriptionComponent
+                    name="Biblioteca"
+                    picture="https://yt3.ggpht.com/a/AATXAJwnz1ueXlDaLvsd899pl6IbqR_ZRvRCgmzXb36rrg=s88-c-k-c0xffffffff-no-rj-mo"
+                />
+                <AsideSuscriptionComponent
+                    name="Biblioteca"
+                    picture="https://yt3.ggpht.com/a/AATXAJwDA9YnpVmMh6YyXFj-qd_EhG3UxnMX9UoV7J-FWg=s88-c-k-c0xffffffff-no-rj-mo"
+                />
+                <AsideSuscriptionComponent
+                    name="Biblioteca"
+                    picture="https://yt3.ggpht.com/a/AATXAJwXxITlfxKmPX2h2OkLKwxzR-OoCLCxkKmf1Ugs=s88-c-k-c0xffffffff-no-rj-mo"
+                />
+                <AsideListComponent name="Explorar canales" icon={<PlusLogo />} />
             </div>
             <div className="aside_suscripciones">
                 <AsideTitle title="Más de YouTube" />
