@@ -5,9 +5,10 @@ import Main from './Main/Main';
 import styled from 'styled-components';
 
 const HomeLayout = styled.div`
-    min-height: 100vh;
+    height: 100vh;
+    overflow: hidden;
     display: grid;
-    grid-template-columns: 350px 1fr;
+    grid-template-columns: 250px 1fr;
     grid-template-rows: auto 1fr;
 `;
 

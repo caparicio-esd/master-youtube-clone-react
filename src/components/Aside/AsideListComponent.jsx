@@ -8,7 +8,7 @@ const AsideListComponentStyled = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0.5rem 1rem;
+    padding: 0.75rem 1rem;
     background-color: ${({ active }) => (active ? '#d6d6d6' : '')};
 
     .aside_list_component_icon {
@@ -26,9 +26,9 @@ const AsideListComponentStyled = styled.div`
 /**
  *
  */
-const AsideListComponent = ({ icon, name }) => {
+const AsideListComponent = ({ icon, name, active }) => {
     return (
-        <AsideListComponentStyled className="aside_list_component" active={false}>
+        <AsideListComponentStyled className="aside_list_component" active={active || false}>
             <div className="aside_list_component_icon">{icon}</div>
             <div className="aside_list_component_label">{name}</div>
         </AsideListComponentStyled>

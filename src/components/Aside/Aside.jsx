@@ -25,14 +25,20 @@ import styled from 'styled-components';
 
 const AsideStyled = styled.aside`
     grid-area: 2 / 1 / span 1 / span 1;
+    border-right: 1px solid #ddd;
+    max-height: 100%;
+    overflow: auto;
+
+    > div {
+        border-bottom: 2px solid #ddd;
+    }
 `;
 
 const Aside = (props) => {
     return (
         <AsideStyled className="aside">
             <div className="aside_inicio">
-                <AsideTitle title="" />
-                <AsideListComponent name="Inicio" icon={<HomeLogo />} />
+                <AsideListComponent name="Inicio" icon={<HomeLogo />} active={true} />
                 <AsideListComponent name="Tendencias" icon={<FlameLogo />} />
                 <AsideListComponent name="Suscripciones" icon={<SuscriptionsLogo />} />
             </div>
