@@ -41,6 +41,9 @@ const HeaderSearchForm = (props) => {
                         name="search"
                         id="search"
                         placeholder="Busca whatever..."
+                        autoComplete="off"
+                        onFocus={() => props.resultsOpen(true)}
+                        onBlur={() => props.resultsOpen(false)}
                     />
                 </div>
                 <div className="form_group">
