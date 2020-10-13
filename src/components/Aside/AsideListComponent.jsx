@@ -26,9 +26,13 @@ const AsideListComponentStyled = styled.div`
 /**
  *
  */
-const AsideListComponent = ({ icon, name, active }) => {
+const AsideListComponent = ({ icon, name, active, swithActiveItemHandler }) => {
     return (
-        <AsideListComponentStyled className="aside_list_component" active={active || false}>
+        <AsideListComponentStyled
+            className="aside_list_component"
+            active={active || false}
+            onClick={() => swithActiveItemHandler(name)}
+        >
             <div className="aside_list_component_icon">{icon}</div>
             <div className="aside_list_component_label">{name}</div>
         </AsideListComponentStyled>

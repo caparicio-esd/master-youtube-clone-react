@@ -2,9 +2,7 @@ import React from 'react';
 import AsideListComponent from './AsideListComponent';
 import AsideTitle from './AsideTitle';
 import AsideSuscriptionComponent from './AsideSuscriptionComponent';
-import { ReactComponent as HomeLogo } from './../../assets/icons/home.svg';
-import { ReactComponent as FlameLogo } from './../../assets/icons/flame.svg';
-import { ReactComponent as SuscriptionsLogo } from './../../assets/icons/suscriptions.svg';
+
 import { ReactComponent as LibraryLogo } from './../../assets/icons/library.svg';
 import { ReactComponent as HistorialLogo } from './../../assets/icons/historial.svg';
 import { ReactComponent as MyVideosLogo } from './../../assets/icons/my_videos.svg';
@@ -22,6 +20,7 @@ import { ReactComponent as AskLogo } from './../../assets/icons/ask.svg';
 import { ReactComponent as SuggestionsLogo } from './../../assets/icons/suggestions.svg';
 import Footer from './Footer';
 import styled from 'styled-components';
+import asideDataRaw from './../../api/aside';
 
 const AsideStyled = styled.aside`
     grid-area: 2 / 1 / span 1 / span 1;
@@ -35,12 +34,26 @@ const AsideStyled = styled.aside`
 `;
 
 const Aside = (props) => {
+    const [asideData, setAsideData] = React.useState(asideDataRaw);
+
+    const swithActiveItemHandler = (label) => {
+        const new_asideData = [...asideData];
+        new_asideData.forEach(ad => ad.active = false);
+        new_asideData.find(ad => ad.label == label).active = true;
+        setAsideData(new_asideData)
+    };
+
     return (
         <AsideStyled className="aside">
             <div className="aside_inicio">
-                <AsideListComponent name="Inicio" icon={<HomeLogo />} active={true} />
-                <AsideListComponent name="Tendencias" icon={<FlameLogo />} />
-                <AsideListComponent name="Suscripciones" icon={<SuscriptionsLogo />} />
+                {asideData.slice(0, 3).map((asideItem, i) => (
+                    <AsideListComponent key={i}
+                        name={asideItem.label}
+                        icon={<asideItem.icon />}
+                        active={asideItem.active}
+                        swithActiveItemHandler={swithActiveItemHandler}
+                    />
+                ))}
             </div>
             <div className="aside_biblioteca">
                 <AsideTitle title="" />
