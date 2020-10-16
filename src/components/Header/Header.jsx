@@ -4,6 +4,8 @@ import HeaderNavigation from './HeaderNavigation/HeaderNavigation';
 import HeaderSearch from './HeaderSearch/HeaderSearch';
 import styled from 'styled-components';
 
+import headerData from './../../api/header';
+
 /**
  *
  *
@@ -22,10 +24,13 @@ const HeaderStyled = styled.header`
  *
  */
 const Header = (props) => {
+
+    console.log(headerData.searchBox);
+
     return (
         <HeaderStyled className="header">
-            <HeaderBrand></HeaderBrand>
-            <HeaderSearch></HeaderSearch>
+            <HeaderBrand logo={headerData.logo}></HeaderBrand>
+            <HeaderSearch searchInfo={headerData.searchBox} ></HeaderSearch>
             <HeaderNavigation></HeaderNavigation>
         </HeaderStyled>
     );

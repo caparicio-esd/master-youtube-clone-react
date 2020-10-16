@@ -1,6 +1,6 @@
 import React from 'react';
 import VideoCard from './VideoCard';
-import videosData from './videosData.json';
+import videosData from './../../api/videosData.json';
 import styled from 'styled-components';
 
 const MainStyled = styled.main`

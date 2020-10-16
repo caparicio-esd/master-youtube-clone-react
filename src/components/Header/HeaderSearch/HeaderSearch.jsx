@@ -28,16 +28,13 @@ const HeaderSearchStyled = styled.div`
  *
  *
  */
-const HeaderSearch = (props) => {
-    const [resultsOpened, setResultsOpened] = React.useState(false);
-
-    const resultsOpenHandler = (open) => {
-        setResultsOpened(open);
-    };
+const HeaderSearch = ({searchInfo}) => {
+ 
+    
 
     return (
-        <HeaderSearchStyled className="header_search" showResults={resultsOpened}>
-            <HeaderSearchForm resultsOpen={resultsOpenHandler}></HeaderSearchForm>
+        <HeaderSearchStyled className="header_search">
+            <HeaderSearchForm></HeaderSearchForm>
             <div className="search_results">
                 <HeaderSearchResult label="Result label 1"></HeaderSearchResult>
                 <HeaderSearchResult label="Result label 2"></HeaderSearchResult>

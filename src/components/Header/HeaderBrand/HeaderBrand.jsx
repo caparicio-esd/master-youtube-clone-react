@@ -34,7 +34,7 @@ const HeaderBrandStyled = styled.div`
  *
  *
  */
-const HeaderBrand = (props) => {
+const HeaderBrand = ({logo}) => {
     return (
         <HeaderBrandStyled className="header_brand">
             <div className="header_toggle">

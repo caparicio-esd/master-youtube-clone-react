@@ -1,3 +1,6 @@
-export default [
-    
-];
+export default {
+    logo: null,
+    searchBox: {
+        showingSearchResults: false
+    }
+};
